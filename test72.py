@@ -1,9 +1,10 @@
 import unittest
-import lab72 as code
+import lab72rec as code
+
 
 class TestProgramm(unittest.TestCase):
     def test_calc(self):
-        matrix_test = code.create((8,6))
+        matrix_test = code.create((8, 6))
         for i in range(len(matrix_test)):
             list1 = matrix_test[i + 1]
             list2 = sorted(list1)
@@ -15,7 +16,7 @@ class TestProgramm(unittest.TestCase):
             list1[index_max] = n_min
             matrix_test.update({i + 1: list1})
         return matrix_test
-        matrix = code.create((8,6))
+        matrix = code.create((8, 6))
         matrix = code.change(matrix)
-        
+
         self.assertEqual(matrix, matrix_test)
